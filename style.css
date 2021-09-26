@@ -1,0 +1,64 @@
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: content-box;
+         }
+         
+         html,
+         body {
+             width: 100%;
+             height: 100%;
+         }
+         
+         .button-container {
+             width: 100%;
+             height: 100%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             background-color: #111111;
+             color: #ffffff;
+         }
+         
+         button {
+             position: relative;
+             background-color: transparent;
+             padding: 10px 20px;
+             color: #ffffff;
+             border: none;
+             font-size: 1.9em;
+             transform: none;
+             cursor: pointer;
+         }
+         
+         button:after {
+             content: "";
+             height: 100%;
+             width: calc(100% + 20px);
+             position: absolute;
+             top: -2px;
+             left: -10px;
+             border-top: 2px solid #fff;
+             border-bottom: 2px solid #fff;
+             transition: 1s;
+         }
+         
+         button:before {
+             content: "";
+             height: calc(100% + 20px);
+             width: 100%;
+             position: absolute;
+             top: -10px;
+             left: -2px;
+             border-left: 2px solid #fff;
+             border-right: 2px solid #fff;
+             transition: 1s;
+         }
+         
+         button:hover:before {
+             transform: rotateY(180deg);
+         }
+         
+         button:hover:after {
+             transform: rotateX(180deg);
+         }
